@@ -1,0 +1,164 @@
+﻿<doctype html>
+<html>
+<head>
+	<title>Hot Beans Web</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Hot Bean Web: Home of web developers"> 
+  <meta name="keywords" content="HTML, CSS, JavaScript, Jobs, Website Developers"> 
+  <meta name="author" content="Racheal Balogun">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mainstyle.css">
+</head>
+<script>
+function emailIsValid(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function validateForm() {
+	let fNmame = document.forms["Application"]["firstname"].value;
+	if (fNmame == "") {
+		alert("First name must be filled out");
+		return false;
+	}
+	let lName = document.forms["Application"]["lastname"].value;
+	if (lName == "") {
+		alert("Last name must be filled out");
+		return false;
+	}
+	let email = document.forms["Application"]["email"].value;
+	if (email == "") {
+		alert("Email must be filled out");
+		return false;
+	}
+	let mobnumber = document.forms["Application"]["phonenumber"].value;
+	if (mobnumber == "") {
+		alert("Phone Number must be filled out");
+		return false;
+	}
+	let apdateofbirth = document.forms["Application"]["dateofbirth"].value;
+	if (apdateofbirth == "") {
+		alert("Date of birth must be filled out");
+		return false;
+	}
+	let apmessage = document.forms["Application"]["message"].value;
+	if (apmessage == "") {
+		alert("Question 1 must be filled out");
+		return false;
+	}
+	let apmessagetwo = document.forms["Application"]["mesagetwo"].value;
+	if (apmessagetwo == "") {
+		alert("Question 2 must be filled out");
+		return false;
+	}
+	let apmessagethree = document.forms["Application"]["messagethree"].value;
+	if (apmessagethree == "") {
+		alert("Question 3 must be filled out");
+		return false;
+	}
+	if (emailIsValid(email)==false) {
+	    alert("email format is incorrect");
+		return false;
+		}
+	return true;
+}
+</script>
+<body>
+<header>
+<div class="topleft">
+   <img src="hotbeanslogo.png" alt= "Company Logo" style= "width: 90px; height: 80px;">
+</div>
+<h1 class="header1">Hot Beans Web</h1>
+ <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meetourteam.html">Meet Our Team</a></li>
+            <li><a href="vacancies.html">Vacancies</a></li>
+            <li><a href="developmentcourses.html">Development Courses</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+<form name="Application" action="https://formspree.io/f/mzbnoyww" method="POST" class="form" onsubmit="return validateForm()">
+<br>
+  <label>
+    First Name:
+    <textarea name="firstname" type="firstname"></textarea>
+  </label>
+  </br>
+<br>
+  <label>
+    Last Name:
+    <input name="lastname">
+  </label>
+</br>
+<br>
+  <label>
+    Email:
+    <textarea  type="email" name="email"></textarea>
+  </label>
+</br>
+<br>  
+  <label>
+    Date Of Birth:
+    <textarea name="dateofbirth"></textarea>
+  </label>
+</br>
+<br>  
+  <label>
+    Phone Number:
+    <input type="number" name="phonenumber">
+</br>
+  </label>
+  <br>
+  <label>
+     Question 1: What role are you applying for?:
+    <textarea name="message"></textarea>
+  </label>
+</br>
+<br>
+  <label>
+    Question 2: Why should we hire you?:
+    <textarea name="mesagetwo"></textarea>
+  </label>
+</br>
+<br>
+  <label>
+    Question 3: What attracts you to our company?:
+    <textarea name="messagethree"></textarea>
+  </label>
+</br>
+  <!-- your other form fields go here -->
+<br>
+<label for="myfile">Upload CV/Resume</label>
+<br>
+<input type="file" id="myfile" name="myfile">
+</br>
+</br>
+<br>
+  <button type="submit" class="send">Send</button>
+</br>
+</form>
+</main>
+<br>
+<section>
+   <footer>
+    <div class="footer-content">​
+      <div class="footer-info">​
+        <h3>Contact Us</h3>​
+        <p>Email: hotbeansweb@gmail.com</p>​
+        <p>Phone: (123) 456-7890</p>​
+        <p>Address: 123 Street, City</p>​
+      </div>​
+	  <div class="social-media">
+<h3>Connect with Us</h3>
+<a href="https://www.instagram.com" class="social-icon"><img src="instagram-icon.png" width="50" height="50"alt="Instagram"></a>
+<a href="https://www.twitter.com" class="social-icon"><img src="twitter-icon.png" width="50" height="50" alt="Twitter"></a>
+<a href="https://uk.linkedin.com" class="social-icon"><img src="linkedin-icon.png" width="50" height="50" alt="LinkedIn"></a>
+<a href="https://www.facebook.com/" class="social-icon"><img src="facebook-icon.png" width="50" height="50" alt="Facebook"></a>
+      </div>
+    </div>
+</footer>
+</section>
+</br>
+</body>
+</html>
